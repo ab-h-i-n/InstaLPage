@@ -16,10 +16,13 @@ const loginbtn = document.querySelector(".login");
 passfield.addEventListener("focus",()=>{
         passShowbtn.style.display = "block"
 })
-inputfields.addEventListener("blur",()=>{
-    passShowbtn.style.display = "none"
-    console.log("blur");
+
+passfield.addEventListener("blur",()=>{
+  if(passfield.value.length === 0){
+    passShowbtn.style.display = "none";
+  }
 })
+
     function show() {
         passfield.type = "text"
         passShowbtn.innerText = "Hide"
