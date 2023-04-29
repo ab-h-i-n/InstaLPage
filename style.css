@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.loading-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+.loading-page .logo{
+    width: 250px;
+}
+.loading-page .footer{
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+}
+.loading-page .meta{
+    width: 250px;
+}
+.loading-page .from{
+    color: rgb(180, 180, 180);
+    font-size: 3rem;
+}
