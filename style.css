@@ -5,16 +5,22 @@
 }
 body{
     width: 100vw;
+    height: 100vh;
+}
+.topbar{
+    background-color: red;
+    width: 100%;
+    height: 100px;
 }
 .loading-page{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;
+    height:100%;
 }
 .loading-page .logo{
-    width: 250px;
+    width: 150px;
 }
 .loading-page .footer{
     position: absolute;
