@@ -32,11 +32,11 @@ body{
 
 .footer{
     z-index: 2;
-    position: absolute;
+    position: fixed;
     text-align: center;
     bottom:30px;
-    left: 0;
     right: 0;
+    left: 0;
 }
 .meta{
     width: 95px;

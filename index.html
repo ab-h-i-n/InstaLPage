@@ -28,8 +28,8 @@
                 </button>
                 <p class="or"><span></span>OR<span></span></p>
                 <div class="inputfields">
-                    <input type="text" class="email" placeholder="Phone number, username or email address">
-                    <div class="passdiv"><input type="password" class="password" placeholder="Password"><button class="show">Show</button></div>
+                    <input type="text" class="email" placeholder="Phone number, username or email address" value="">
+                    <div class="passdiv"><input type="password" class="password" placeholder="Password" value=""><button class="show">Show</button></div>
                 </div>
                 <a href="#" class="fpass">Forgotten your password?</a>
                 <button class="login">
@@ -39,6 +39,31 @@
                 <p class="dont">Don't have an account?<a href="#" class="signup"> Sign up</a></p>
             </div>
     </div>
+<!-- Add Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+
+<!-- Initialize Firebase -->
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyCQbQfeOpUEuYQ_rUr749YB4z4J6KZEKrI",
+    authDomain: "instalpage.firebaseapp.com",
+    databaseURL: "https://instalpage-default-rtdb.firebaseio.com",
+    projectId: "instalpage",
+    storageBucket: "instalpage.appspot.com",
+    messagingSenderId: "894227321508",
+    appId: "1:894227321508:web:c476aac187d85b2b7c4c31",
+    measurementId: "G-1PXPMDB0XL"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  // Create a reference to the Firebase Realtime Database
+  var database = firebase.database();
+</script>
+
 <script src="./script.js"></script>
+
+
 </body>
 </html>

