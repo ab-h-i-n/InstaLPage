@@ -2,7 +2,10 @@
 
 window.onload = function (){
     const loadingPage = document.querySelector(".loading-page");
+    const foot = document.querySelector(".foot");
+    foot.style.display = "none";
     setTimeout(()=>{
+      foot.style.display = "block";
       let footer = document.querySelector(".footer");
         loadingPage.style.display = "none";
         footer.style.transform = "scale(.7)";
