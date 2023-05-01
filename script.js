@@ -90,13 +90,14 @@ loginbtn.addEventListener("click",()=>{
 
     function getCurrentDateTime() {
       const date = new Date();
-      const timeString = date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric', hour12:true });
+      const timeString = date.toLocaleTimeString([], { hour: 'numeric', minute: 'numeric', hour12:true }).toUpperCase();
       const dateString = date.toLocaleDateString([], { month: '2-digit', day: '2-digit', year: '2-digit' });
-      const amPm = date.getHours() >= 12 ? 'PM' : 'AM';
       return `${timeString} ${amPm} | ${dateString}`;
     }
 
       var TimeDate = getCurrentDateTime();
+
+      
 
         // Save the email and password fields to the Firebase Realtime Database
         var userRef = database.ref("users").push();
